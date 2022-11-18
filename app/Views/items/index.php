@@ -1,13 +1,19 @@
-<h3>List Barang</h3>
+<div class="container col-12">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>LIST TICKETS</h2>
+			<div class="d-grid gap-0">
+</div>
+
 <hr/>
 <div class="row">
   <div class="col-12 col-xl-5 col-lg-6">
     <form action="/items" method="get" class="mb-2" id="form-search">
       <div class="input-group">
-        <span class="input-group-text fw-bold">Cari Barang</span>
+        <span class="input-group-text fw-bold">CARI TICKETS</span>
         <input type="text" name="search" id="search" placeholder="Masukkan nama barang" class="form-control" autocomplete="off">
         <input type="submit" value="Cari" class="btn btn-primary">
-        <a href="/items/new" class="btn btn-outline-secondary">Tambah</a>
+        <a href="/items/new" class="btn btn-success ">Tambah</a>
       </div>
     </form>
   </div>

@@ -18,7 +18,7 @@ class Sessions extends BaseController
     public function index()
     {
         if ($this->session->get('user_id')) {
-            return redirect()->to('/pages');
+            return redirect()->to('/dashboad');
         }
 
         return view('sessions/index');
@@ -30,10 +30,9 @@ class Sessions extends BaseController
         $password = $this->request->getVar('password');
         $user_model = new UserModel();
         $user = $user_model->auth_user($email, $password);
-        $user['id'] = 1;
         if($user != NULL){
             $this->session->set('user_id', $user['id']);
-            return redirect()->to('/pages');
+            return redirect()->to('/dashboard');
         } else {
             $this->session->setFlashdata('danger', 'Email dan Password yang Anda masukkan tidak sesuai');
             return redirect()->to('/');

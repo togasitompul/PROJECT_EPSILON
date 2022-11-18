@@ -1,50 +1,60 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
   <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .bg-kanan {
-      background-image: url('/assets/images/foto.jpg');
-      background-size: cover;
-    }
-  </style>
+</style>
 </head>
-
 <body>
-  <div class="row">
-    <div class="col-12 col-md-6">
-      <div class="container mt-5">
-        <?php foreach (session()->getFlashdata() as $key => $flash) : ?>
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">   
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+         <?php foreach (session()->getFlashdata() as $key => $flash) : ?>
           <div class="alert alert-<?= $key ?>" role="alert">
-            <?= $flash ?>
-          </div>
+          <?= $flash ?>
+        </div>
         <?php endforeach; ?>
+
         <form action="/sessions" method="post">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+          <h1 class="my-6 display-5 fw-bold ls-tight" style="color:#20c997;" >
+          TOKOKONSER <br />
+          <span style="color: hsl(218, 81%, 75%)"></span>
+        </h1>
+        <p class="mb-5 fs-4 opacity-150" style="color:#495057">
+        Toko konser merupakan website untuk mempermudahkan pembelian dan penjualan serta menjamin keabsahan tiket konser
+      </p>
+    </div>
+
+    <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+      <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+      <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+      <div class="card bg-glass">
+        <div class="card-body px-4 py-5 px-md-5">
+          
+        <!-- Email input -->
+                <div class="form-outline mb-3">
+                  <input type="email" name="email" id="exampleFormControlInput1" class="form-control" placeholder="name@example.com">
+                  <label class="form-label" for="exampleFormControlInput1">ID KASIR</label>
+                </div>
+                
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="******" />
+                  <label class="form-label" for="password">PASSWORD</label>
+                </div>
+              </div>
+              
+              <!-- Submit button -->
+              <input type="submit" value="MASUK" class="btn btn-success btn-block mb-4">
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="password">
-          </div>
-          <div class="mb-3">
-            <input type="submit" value="Masuk" class="btn btn-secondary">
-          </div>
-        </form>
+          <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        </div>
       </div>
     </div>
-    <div class="col-md-6 d-none d-md-block bg-kanan" style="height: 100vh">
-      <!-- <img src="/assets/images/foto.jpg" alt="FOTO" width="100%> -->
-    </div>
   </div>
-
-
-  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
+
+

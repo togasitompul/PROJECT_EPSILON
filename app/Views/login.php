@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>TOKOKONSER</title>
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bg-kanan {

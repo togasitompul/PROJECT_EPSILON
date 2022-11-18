@@ -18,12 +18,26 @@ class Items extends Migration
                 'type' => 'varchar',
                 'constraint' => 255
             ],
-            'unit' => [
+            'artis_id' => [
+                'type' => 'int',
+            ],
+            'venue' => [
                 'type' => 'varchar',
                 'constraint' => 255
             ],
+            'ticket_limit' => [
+                'type' => 'int'
+
+            ],
+            'event_date' => [
+                'type' => 'datetime'
+            ],
+            
             'price' => [
                 'type' => 'decimal'
+            ],
+            'status_id' => [
+                'type' => 'int',
             ],
         ]);
         $this->forge->addPrimaryKey('id', TRUE);

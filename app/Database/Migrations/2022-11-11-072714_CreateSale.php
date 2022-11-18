@@ -14,15 +14,37 @@ class CreateSale extends Migration
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'invoice_no' => [
+            'event_id' => [
                 'type' => 'varchar',
                 'constraint' => 255
             ],
-            'invoice_date' => [
-                'type' => 'datetime'
+            'custumer_id' => [
+                'type' => 'varchar',
+                'constraint' => 255
             ],
-            'customer_id' => [
-                'type' => 'int',
+            'ticket_no' => [
+                'type' => 'varchar',
+                'constraint' => 255
+            ],
+            'purchased_at' => [
+                'type' => 'varchar',
+                'constraint' => 255
+            ],
+            'status_id' => [
+                'type' => 'varchar',
+                'constraint' => 255
+            ],
+            'validate_at' => [
+                'type' => 'varchar',
+                'constraint' => 255
+            ],
+
+            'user_id' => [
+                'type' => 'varchar',
+                'constraint' => 255
+            ],
+            'validated_by_id' => [
+                'type' => 'datetime'
             ],
             'grand_total' => [
                 'type' => 'int'

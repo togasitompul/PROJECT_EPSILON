@@ -4,8 +4,10 @@
         <th>No</th>
         <th>Image</th>
         <th>Nama</th>
-        <th>Satuan</th>
-        <th>Harga</th>
+        <th>venue</th>
+        <th>ticket limit</th>
+        <th>event date</th>
+        <th>price</th>
         <th>Status</th>
         <th>Action</th>
       </tr>
@@ -21,7 +23,9 @@
             <td><?= $order_number++ ?></td>
             <td><img src="/assets/images/<?= $item['image_name'] ?>" alt="Image for <?= $item['name'] ?>" width="200px"/></td>
             <td><?= $item['name'] ?></td>
-            <td><?= $item['unit'] ?></td>
+            <td><?= $item['venue'] ?></td>
+            <td><?= $item['ticke_limit'] ?></td>
+            <td><?= $item['event_date'] ?></td>
             <td><?= $item['price'] ?></td>
             <td>
               <?php

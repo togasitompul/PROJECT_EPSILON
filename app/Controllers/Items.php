@@ -39,7 +39,9 @@ class Items extends BaseController
     {
         if (!$this->validate([
             'name' => "required|alpha_numeric_space",
-            'unit'  => 'required|alpha_numeric_space',
+            'venue'  => 'required|alpha_numeric_space',
+            'ticket_limit'  => 'required|alpha_numeric_space',
+            'event_date'  => 'required|alpha_numeric_space',
             'price'  => 'required|integer',
             'image_upload' => 'uploaded[image_upload]'
         ])) {
@@ -91,8 +93,11 @@ class Items extends BaseController
     public function update($id){
         if (!$this->validate([
             'name' => "required|alpha_numeric_space",
-            'unit'  => 'required|alpha_numeric_space',
-            'price'  => 'required|integer',
+            'venue'  => 'required|alpha_numeric_space',
+            'ticket_limit' =>'required|int',
+            'event_date' => 'required|alpha_numeric_space',
+            'price'  => 'required|decimal',
+
         ])) {
             $item_model = new ItemModel();
             $data['main_view'] = 'items/edit';

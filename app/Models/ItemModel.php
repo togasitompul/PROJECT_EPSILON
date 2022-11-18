@@ -14,7 +14,7 @@ class ItemModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'unit', 'price', 'image_name', 'status_id'];
+    protected $allowedFields    = ['name', 'venue', 'image_name', 'ticket_limit','event_date','price', 'status_id'];
 
     // Dates
     protected $useTimestamps = false;
@@ -63,19 +63,26 @@ class ItemModel extends Model
 
         $data = [
             'name' => $params->getVar('name'),
-            'unit' => $params->getVar('unit'),
+            'venue' => $params->getVar('venue'),
+            'ticket_limit' => $params->getVar('ticket_liimit'),
+            'event_date' => $params->getVar('event_date'),
             'price' => $params->getVar('price'),
             'image_name' => $image_name,
-            'status_id' => $params->getVar('status_id')
+            'status_id' => $params->getVar('status_id'),
+            'image_name' => $image_name
         ];
         return $this->save($data);
     }
 
     public function update_data($id, $params){
         $data = [
+
             'name' => $params->getVar('name'),
-            'unit' => $params->getVar('unit'),
+            'venue' => $params->getVar('venue'),
+            'ticket_limit' => $params->getVar('ticket_liimit'),
+            'event_date' => $params->getVar('event_date'),
             'price' => $params->getVar('price'),
+            'image_name' => $image_name,
             'status_id' => $params->getVar('status_id')
         ];
         return $this->update($id, $data);

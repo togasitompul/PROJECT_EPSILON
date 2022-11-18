@@ -1,7 +1,11 @@
-<h3>List Sale</h3>
-<hr/>
+<div class="container col-12">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>LIST SALE</h2>
+			<div class="d-grid gap-0">
+</div>
 
-<a href="sales/new" class="btn btn-primary mb-2">Tambah Sale</a>
+<a href="sales/new" class="btn btn-success md-3 ">Tambah Sale</a>
 
 <?php foreach (session()->getFlashdata() as $key => $flash) : ?>
   <div class="alert alert-<?= $key ?>" role="alert">

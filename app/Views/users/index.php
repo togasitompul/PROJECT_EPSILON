@@ -7,7 +7,7 @@
         <span class="input-group-text fw-bold">Cari User</span>
         <input type="text" name="search" id="search" placeholder="Masukkan nama user atau email" class="form-control" autocomplete="off">
         <input type="submit" value="Cari" class="btn btn-primary">
-        <a href="/users/new" class="btn btn-outline-secondary">Tambah</a>
+        <a href="/users/new" class="btn btn-success ">Tambah</a>
       </div>
     </form>
   </div>

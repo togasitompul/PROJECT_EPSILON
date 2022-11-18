@@ -36,9 +36,9 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Sessions::index');
-$routes->get('pages/dashboard', 'Pages::dashboard');
+$routes->get('pages/dashboard', 'dashboard::dashboard');
 $routes->get('employees/add', 'Employee::add');
-$routes->post('checklogin', 'Pages::checklogin');
+$routes->post('checklogin', 'dashboard::checklogin');
 $routes->post('sessions/logout', 'Sessions::logout');
 $routes->get('items/get_autocomplete', 'Items::get_autocomplete');
 $routes->resource('customers');
@@ -47,6 +47,8 @@ $routes->resource('employees');
 $routes->resource('items');
 $routes->resource('pages');
 $routes->resource('sales');
+$routes->resource('kart');
+$routes->resource('validation');
 $routes->resource('saleitems');
 $routes->resource('sessions');
 $routes->resource('users');

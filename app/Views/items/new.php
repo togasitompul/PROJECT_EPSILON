@@ -13,11 +13,31 @@
     <?php } ?>
   </div>
   <div class="mb-3">
-    <label for="unit" class="form-label">Unit</label>
-    <input type="text" name="unit" id="unit" class="form-control" value="<?= set_value('unit') ?>">
-    <?php if (isset($errors) and $errors->getError('unit')) { ?>
+    <label for="venue" class="form-label">venue</label>
+    <input type="text" name="venue" id="venue" class="form-control" value="<?= set_value('venue') ?>">
+    <?php if (isset($errors) and $errors->getError('venue')) { ?>
       <div class='text-danger mt-2'>
-        <?= $error = $errors->getError('unit'); ?>
+        <?= $error = $errors->getError('venue'); ?>
+      </div>
+    <?php } ?>
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="ticket_limit" class="form-label">ticket_limit</label>
+    <input type="text" name="ticket_limit" id="ticket_limit" class="form-control" value="<?= set_value('ticket-limit') ?>">
+    <?php if (isset($errors) and $errors->getError('ticket_limit')) { ?>
+      <div class='text-danger mt-2'>
+        <?= $error = $errors->getError('ticket_limit'); ?>
+      </div>
+    <?php } ?>
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="event_date" class="form-label">event_date</label>
+    <input type="text" name="event_date" id="event_date" class="form-control" value="<?= set_value('event_date') ?>">
+    <?php if (isset($errors) and $errors->getError('event_date')) { ?>
+      <div class='text-danger mt-2'>
+        <?= $error = $errors->getError('event_date'); ?>
       </div>
     <?php } ?>
   </div>
@@ -50,3 +70,7 @@
     <input type="submit" value="Simpan" class="btn btn-primary">
   </div>
 </form>
+
+<script>
+  $('#event_date').datetimepicker();
+</script>
